@@ -16,6 +16,8 @@ namespace LoginCrossPlatform
         public MainPage()
         {
             InitializeComponent();
+            Console.WriteLine("artrebui aici sa aduci pagina cu pagina proiectul din partea cealalta. " +
+                "Acum incerc sa fac o modificare in proiect si apoi s-o commitez");
         }
     }
 }
