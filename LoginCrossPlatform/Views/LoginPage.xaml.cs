@@ -17,15 +17,15 @@ namespace LoginCrossPlatform.Views
         {
             await Navigation.PushAsync(new RegistrationPage());
         }
-        async void Handle_Clicked_1(object sender, System.EventArgs e)
+        void Handle_Clicked_1(object sender, System.EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
             var db = new SQLiteConnection(dbpath);
             var myquery = db.Table<RegUserLog>().Where(u => u.UserName.Equals(EntryUser.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
 
-            if(myquery!=null)
+            if (myquery != null)
             {
-                App.Current.MainPage = new NavigationPage(new HomePage());
+                Application.Current.MainPage = new NavigationPage(new HomePage());
             }
             else
             {
