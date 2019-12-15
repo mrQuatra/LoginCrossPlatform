@@ -33,7 +33,7 @@ namespace LoginCrossPlatform.Views
             Device.BeginInvokeOnMainThread(async () =>
                 {
 
-                    var result = await this.DisplayAlert("Congratulation", "User Registration Sucessfull", "Yes", "Cancel");
+                    var result = await this.DisplayAlert("Congratulation", "User Registred", "Yes", "Cancel");
 
                     if (result)
                         await Navigation.PushAsync(new LoginPage());
